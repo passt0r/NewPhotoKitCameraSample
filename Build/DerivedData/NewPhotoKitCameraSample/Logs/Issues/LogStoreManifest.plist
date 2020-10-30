@@ -5,36 +5,7 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict>
-		<key>A56029C0-33B1-4E84-9ADC-D4E5779B08D2</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>A56029C0-33B1-4E84-9ADC-D4E5779B08D2.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>NewPhotoKitCameraSample-ftsprtobcaaoxaebryncanbxhhqi</string>
-			<key>timeStartedRecording</key>
-			<real>625779009.07615495</real>
-			<key>timeStoppedRecording</key>
-			<real>625779010.512815</real>
-			<key>title</key>
-			<string>Build target NewPhotoKitCameraSample</string>
-			<key>uniqueIdentifier</key>
-			<string>A56029C0-33B1-4E84-9ADC-D4E5779B08D2</string>
-		</dict>
-	</dict>
+	<dict/>
 	<key>preserveOldLogs</key>
 	<true/>
 </dict>
