@@ -27,11 +27,29 @@ class ViewController: UIViewController {
 //MARK: - Actions
 extension ViewController {
     private func showPhotoSourceMenu() {
-        
+        let imageSourceAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let chooseCameraImageSourceAlertAction = UIAlertAction(title: "Camera", style: .default) { [unowned self] (_) in
+            self.showCamera()
+        }
+        let chooseLibraryImageSourceAlertAction = UIAlertAction(title: "Photo Library", style: .default) { [unowned self] (_) in
+            self.presentLibraryPicker()
+        }
+        imageSourceAlertController.addAction(chooseCameraImageSourceAlertAction)
+        imageSourceAlertController.addAction(chooseLibraryImageSourceAlertAction)
+        present(imageSourceAlertController, animated: true)
     }
     
     private func display(image: UIImage) {
         photoView.image = image
+    }
+    
+    private func show(error: Error?) {
+        let errorAlertController = UIAlertController(title: "Oops...", message: error?.localizedDescription ?? "Something goes wrong", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { [unowned self] (_) in
+            self.dismiss(animated: true)
+        }
+        errorAlertController.addAction(okAction)
+        present(errorAlertController, animated: true)
     }
 }
 
@@ -66,7 +84,27 @@ extension ViewController {
     }
     
     private func presentCameraView() {
-        
+        let cameraPickerController = UIImagePickerController()
+        cameraPickerController.sourceType = .camera
+        cameraPickerController.allowsEditing = true
+        cameraPickerController.delegate = self
+        present(cameraPickerController, animated: true)
+    }
+}
+
+extension ViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+
+        guard let capturedImage = info[.editedImage] as? UIImage else {
+            DispatchQueue.main.async { [weak self] in
+                self?.show(error: nil)
+            }
+            return
+        }
+        //Also, we can just use this photo inside the app and did not save it to the library. In this case, we have no reason to ask about any library permission
+        UIImageWriteToSavedPhotosAlbum(capturedImage, nil, nil, nil)
+        display(image: capturedImage)
     }
 }
 
@@ -75,7 +113,6 @@ extension ViewController {
     private func presentLibraryPicker() {
         var libraryPickerConfiguration = PHPickerConfiguration()
         libraryPickerConfiguration.filter = .images
-        
         let libraryPicker = PHPickerViewController(configuration: libraryPickerConfiguration)
         libraryPicker.delegate = self
         present(libraryPicker, animated: true)
@@ -88,11 +125,15 @@ extension ViewController: PHPickerViewControllerDelegate {
         if let selectedItemProvider = results.first?.itemProvider, selectedItemProvider.canLoadObject(ofClass: UIImage.self) {
             selectedItemProvider.loadObject(ofClass: UIImage.self) { [weak self] (loadedImage, error) in
                 DispatchQueue.main.async {
-                    guard let loadedImage = loadedImage as? UIImage, error == nil else { return }
+                    guard let loadedImage = loadedImage as? UIImage, error == nil else {
+                        DispatchQueue.main.async {
+                            self?.show(error: error)
+                        }
+                        return
+                    }
                     self?.display(image: loadedImage)
                 }
             }
         }
     }
-    
 }

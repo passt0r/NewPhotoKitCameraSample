@@ -5,6 +5,109 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>1B8B67F8-CD01-4193-B1AE-7B2242DB92C8</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1B8B67F8-CD01-4193-B1AE-7B2242DB92C8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>NewPhotoKitCameraSample project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>NewPhotoKitCameraSample</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run NewPhotoKitCameraSample</string>
+			<key>timeStartedRecording</key>
+			<real>625778442.47193599</real>
+			<key>timeStoppedRecording</key>
+			<real>625778499.84109497</real>
+			<key>title</key>
+			<string>Run NewPhotoKitCameraSample</string>
+			<key>uniqueIdentifier</key>
+			<string>1B8B67F8-CD01-4193-B1AE-7B2242DB92C8</string>
+		</dict>
+		<key>5DCF15E2-43A7-46A6-BBCF-FBF4EFAD3FE3</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5DCF15E2-43A7-46A6-BBCF-FBF4EFAD3FE3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>NewPhotoKitCameraSample project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>NewPhotoKitCameraSample</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run NewPhotoKitCameraSample</string>
+			<key>timeStartedRecording</key>
+			<real>625778537.744542</real>
+			<key>timeStoppedRecording</key>
+			<real>625778665.50183296</real>
+			<key>title</key>
+			<string>Run NewPhotoKitCameraSample</string>
+			<key>uniqueIdentifier</key>
+			<string>5DCF15E2-43A7-46A6-BBCF-FBF4EFAD3FE3</string>
+		</dict>
+		<key>BA5B2A9D-C03C-4CD6-902D-07DF93E5F852</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BA5B2A9D-C03C-4CD6-902D-07DF93E5F852.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>NewPhotoKitCameraSample project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>NewPhotoKitCameraSample</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run NewPhotoKitCameraSample</string>
+			<key>timeStartedRecording</key>
+			<real>625779010.52959895</real>
+			<key>timeStoppedRecording</key>
+			<real>625779036.00508296</real>
+			<key>title</key>
+			<string>Run NewPhotoKitCameraSample</string>
+			<key>uniqueIdentifier</key>
+			<string>BA5B2A9D-C03C-4CD6-902D-07DF93E5F852</string>
+		</dict>
+	</dict>
 </dict>
 </plist>
