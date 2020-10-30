@@ -44,7 +44,9 @@ extension ViewController {
     }
     
     private func show(error: Error?) {
-        let errorAlertController = UIAlertController(title: "Oops...", message: error?.localizedDescription ?? "Something goes wrong", preferredStyle: .alert)
+        let errorAlertController = UIAlertController(title: "Oops...",
+                                                     message: error?.localizedDescription ?? "Something goes wrong",
+                                                     preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { [unowned self] (_) in
             self.dismiss(animated: true)
         }
