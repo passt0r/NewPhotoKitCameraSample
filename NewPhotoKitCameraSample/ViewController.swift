@@ -114,7 +114,7 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
 extension ViewController {
     private func presentLibraryPicker() {
         var libraryPickerConfiguration = PHPickerConfiguration()
-        libraryPickerConfiguration.filter = .images
+        libraryPickerConfiguration.filter = .any(of: [.images, .livePhotos])
         let libraryPicker = PHPickerViewController(configuration: libraryPickerConfiguration)
         libraryPicker.delegate = self
         present(libraryPicker, animated: true)
